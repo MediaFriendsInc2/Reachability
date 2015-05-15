@@ -47,13 +47,13 @@ typedef NS_ENUM(NSInteger, NetworkStatus) {
     ReachableViaWWAN = 1
 };
 
-@class Reachability;
+@class TMReachability;
 
-typedef void (^NetworkReachable)(Reachability * reachability);
-typedef void (^NetworkUnreachable)(Reachability * reachability);
+typedef void (^NetworkReachable)(TMReachability * reachability);
+typedef void (^NetworkUnreachable)(TMReachability * reachability);
 
 
-@interface Reachability : NSObject
+@interface TMReachability : NSObject
 
 @property (nonatomic, copy) NetworkReachable    reachableBlock;
 @property (nonatomic, copy) NetworkUnreachable  unreachableBlock;
